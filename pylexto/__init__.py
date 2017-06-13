@@ -10,13 +10,7 @@ class LexTo (object):
 		
 		LongLexTo = jpype.JClass("LongLexTo")
 		self.lexto = LongLexTo('%s/lexitron.txt' % (filePath))
-		self.typeString = []
-		self.typeString.append("unknown")
-		self.typeString.append("known")
-		self.typeString.append("ambiguous")
-		self.typeString.append("English/Digits")
-		self.typeString.append("special")
-
+		self.typeString = ["unknown","known","ambiguous","English/Digits","special"]
 	def tokenize(self, line):
 		line = line.strip()
 	
