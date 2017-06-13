@@ -1,4 +1,4 @@
-#!/usr/bin/python
+﻿# -*- coding: utf-8 -*-
 from __future__ import absolute_import,unicode_literals
 import pylexto
 import jpype
@@ -22,7 +22,7 @@ class LexTo (object):
 		begin = self.lexto.first()
 		while self.lexto.hasNext():
 			end = self.lexto.next()
-			wordList.append( line[begin:end] )
+			wordList.append(line[begin:end])
 			begin = end
 
 		return wordList, typeList
