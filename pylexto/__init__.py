@@ -3,10 +3,11 @@ from __future__ import absolute_import,unicode_literals
 import pylexto
 import jpype
 import os
+
 class LexTo (object):
 	def __init__(self):
-		filePath = os.path.join(os.path.dirname(pylexto.__file__))
-		jpype.startJVM(jpype.getDefaultJVMPath(), '-ea', '-Djava.class.path=%s/LongLexTo' % (filePath))
+		filePath = os.path.join(os.path.dirname(pylexto.__file__), 'LongLexTo')
+		jpype.startJVM(jpype.getDefaultJVMPath(), '-ea', '-Djava.class.path=%s' % (filePath))
 		
 		LongLexTo = jpype.JClass("LongLexTo")
 		self.lexto = LongLexTo('%s/lexitron.txt' % (filePath))
