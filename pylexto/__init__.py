@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from __future__ import absolute_import,unicode_literals
 import pylexto
 import jpype
@@ -11,7 +11,6 @@ except:
 	os.environ['CLASSPATH'] = filePath+';'
 class LexTo (object):
 	def __init__(self):
-		filePath = os.path.join(os.path.dirname(pylexto.__file__), 'LongLexTo 
 		jpype.startJVM(jpype.getDefaultJVMPath(), '-ea', '-Djava.class.path=%s' % (filePath))
 		
 		LongLexTo = jpype.JClass("LongLexTo")
