@@ -4,6 +4,8 @@ LexTo with Python 2 & 3 Wrapper
 
 Fork by https://github.com/Remixman/PythonLexTo
 
+* **News** : PyLexTo is Shutting Down. We terminate the development and support of this project. You can fork this project.
+
 ## Install
 
 Make sure CLASSPATH and JAVA_HOME are set and
